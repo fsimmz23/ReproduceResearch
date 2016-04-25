@@ -25,15 +25,15 @@ setwd("C:/Users/farai/OneDrive/Documents")
 
 if (!"stormData.csv.bz2" %in% dir("./data/")) {
     print("hhhh")
-    download.file("http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2", destfile = "data/stormData.csv.bz2")
-    bunzip2("data/stormData.csv.bz2", overwrite=T, remove=F)
+    download.file("http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2", destfile = "C:/Users/farai/OneDrive/Documents/stormData.csv.bz2")
+    bunzip2("C:/Users/farai/OneDrive/Documents/stormData.csv.bz2", overwrite=T, remove=F)
 }
 ```
 Then, we read the generated csv file. If the data already exists in the working environment, we do not need to load it again. Otherwise, we read the csv file.
 
 ```r
 if (!"stormData" %in% ls()) {
-    stormData <- read.csv("data/stormData.csv", sep = ",")
+    stormData <- read.csv("C:/Users/farai/OneDrive/Documents/stormData.csv", sep = ",")
 }
 dim(stormData)
 ```
